@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Angel&#39;s Blog </title>
+		<link>http://example.org/</link>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<author>Angel Rodriguez</author>
+		<rights>Copyright (c) 2018</rights>
+		<updated>2018-12-24 00:00:00 &#43;0000 UTC</updated>
+		
+		<item>
+			<title>FreeCodeCamp Algorithm Challenges</title>
+			<link>http://example.org/fcc-algorithms/</link>
+			<pubDate>Mon, 24 Dec 2018 00:00:00 UTC</pubDate>
+			<author>Angel Rodriguez</author>
+			<guid>http://example.org/fcc-algorithms/</guid>
+			<description>
+
+&lt;h2 id=&#34;javascript-algorithms&#34;&gt;JavaScript Algorithms&lt;/h2&gt;
+
+&lt;p&gt;Today, we’re going to cover several of freeCodeCamp’s algorithm challenges from the Javascript Algorithms And Data Structures Certification. I’ll skip the first “Celsius to Fahrenheit” challenge. I just feel like there’s not much to explain there where you can find the conversion pretty much anywhere on the internet.&lt;/p&gt;
+
+&lt;h2 id=&#34;reverse-a-string&#34;&gt;Reverse a String&lt;/h2&gt;
+
+&lt;p&gt;Let’s start with the “Reverse the String” challenge. The first time I solved this challenge, I used a few JavaScript built-in functions and chained them together like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt; return str.split(‘’).reverse().join(‘’); &lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;I wanted to figure out another way of solving this aside from the more common route. I know FCC’s challenges are written in ES5, but I want to stay up to date and write all functions in ES6. At the end, I’ll print both the ES5 and ES6 functions.&lt;/p&gt;
+
+&lt;p&gt;This one’s fairly simple. We start off with a function:&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString = str =&amp;gt; {&lt;/dd&gt;
+   &lt;dd&gt;return str;&lt;/dd&gt;
+&lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString(“hello&amp;rdquo;);&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;We have our return statement inside the function, which we will later need to adjust to fit the variable we created. Outside of the function, we have our test function call. We can add a few more once we complete this just to be sure the function works as it is intended to.&lt;/p&gt;
+
+&lt;p&gt;Next, we’ll add a variable inside of our function, an empty string, to store our new string. We’ll call it “newString”. We’ll use the “let” keyword since we’re declaring the variable but also reassigning it with each iteration of our for loop. I’m assuming you understand that JavaScript variables are written in camel case as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString = str =&amp;gt; {&lt;/dd&gt;
+   &lt;dd&gt;let newString = “”;&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;return str;&lt;/dd&gt;
+&lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString(“hello”);&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the variable has been declared, we’ll create our for loop. A for loop consists of three statements: initial expression; condition; increment expression; All in that exact order.&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString = str =&amp;gt; {&lt;/dd&gt;
+   &lt;dd&gt;let newString = “”;&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString = str =&amp;gt; {&lt;/dd&gt;
+  &lt;dd&gt;const newString = &amp;ldquo;&amp;rdquo;;&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;for (let i = str.length -1; i &amp;gt;= 0 ; i- -;) {&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;return str;&lt;/dd&gt;
+&lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString(“hello&amp;rdquo;);&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a little different than your typical for loop. If you’re fairly new to JavaScript, the (let i = str.length -1;) variable declaration might look a little off to you. What we’re trying to do here, with the -1, is start at the end of the string. You’ll see this at times when you’re trying to start at the end of the array, instead of 0 (beginning index of an array) you’ll declare a -1 which starts us off at the end. Next, we’ll tell the function that the index or i &amp;gt;= 0; that way, when the loop runs its course, it stops at the 0 index instead of continuing past our declaration. Finally, since we’re starting at the end of the string, we want to decrement our index count till we hit 0 so we’ll adjust our increment expression (in this case our decrement expression) to i- -;&lt;/p&gt;
+
+&lt;p&gt;Something you’ll want to do when testing your function is use your console.log() statement often. This helps you to better see what’s going on as you progress. We can add a console log to the for loop inside the block.&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString = str =&amp;gt; {&lt;/dd&gt;
+  &lt;dd&gt;let newString = &amp;ldquo;&amp;rdquo;;&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;for (let i = str.length -1; i &amp;gt;= 0 ; i- -;) {&lt;/dd&gt;
+  &lt;dd&gt;console.log(str[i]);&lt;/dd&gt;
+ &lt;dd&gt;}&lt;dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;return str;&lt;/dd&gt;
+&lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString(“hello”);&lt;/dd&gt;
+&lt;dd&gt;reverseString(“Howdy”);&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;“o”&lt;/dd&gt;
+&lt;dd&gt;“l”&lt;/dd&gt;
+&lt;dd&gt;“l”&lt;/dd&gt;
+&lt;dd&gt;“e”&lt;/dd&gt;
+&lt;dd&gt;‘h”&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;“y”&lt;/dd&gt;
+&lt;dd&gt;“d”&lt;/dd&gt;
+&lt;dd&gt;“w”&lt;/dd&gt;
+&lt;dd&gt;“o”&lt;/dd&gt;
+&lt;dd&gt;“H”&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;By console logging str[i], we’re taking each iteration of the for loop running through each string. In this case, we know our function works because both strings have been reversed. We just need to add our statement inside the for loop to tell the loop what to do. Let&amp;rsquo;s add “newString += str[i]” inside the for loop. This is the same as declaring, “newString = newString + str[i]”, but it’s just a shorthand version of the same statement. So now, our empty string variable is now equal to the “str” argument passed into the function. Let’s also change our return statement to return the newString variable, too!&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString = str =&amp;gt; {&lt;/dd&gt;
+  &lt;dd&gt;let newString = &amp;ldquo;&amp;rdquo;;&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;for (let i = str.length -1; i &amp;gt;= 0 ; i- -) {&lt;/dd&gt;
+    &lt;dd&gt;newString += str[i];&lt;/dd&gt;
+  &lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;return newString;&lt;/dd&gt;
+&lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;reverseString(&amp;ldquo;hello&amp;rdquo;);&lt;/dd&gt;
+&lt;dd&gt;reverseString(&amp;ldquo;Howdy&amp;rdquo;;&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, we have our reverseString function working. It can also be written in ES5 to pass the FCC test.&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;function reverseString (str) {&lt;/dd&gt;
+   &lt;dd&gt;let newString = &amp;ldquo;&amp;rdquo;;&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;for (let i = str.length -1; i &amp;gt;= 0 ; i- -) {&lt;/dd&gt;
+    &lt;dd&gt;newString += str[i];&lt;/dd&gt;
+  &lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;return newString;&lt;/dd&gt;
+&lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;factorialize-a-number&#34;&gt;Factorialize a Number&lt;/h2&gt;
+
+&lt;p&gt;This description is taken verbatim from the FCC challenge:&lt;/p&gt;
+
+&lt;p&gt;“Return the factorial of the provided integer.
+If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
+Factorials are often represented with the shorthand notation n!
+For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
+Only integers greater than or equal to zero will be supplied to the function.”&lt;/p&gt;
+
+&lt;p&gt;This algorithm is pretty straight forward. Let’s rule out any number 0 or below since the lowest factorial we will ever use is 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;factorialize = num =&amp;gt; {
+  &lt;dd&gt;if (num &amp;lt;= 0) {
+    &lt;dd&gt;return 1;
+  &lt;dd&gt;}
+&lt;dd&gt;}&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;factorialize(5);&lt;/p&gt;
+
+&lt;p&gt;What we’re doing here is creating a safeguard against an argument 0 or below. If this happens, let’s convert the number to 1 and run the function. When that happens, the return is 1. All we have to do now is return our execution sequence. We’ll do that below:&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;factorialize = num =&amp;gt; {&lt;/dd&gt;
+  &lt;dd&gt;if (num &amp;lt;= 0 ) {&lt;/dd&gt;
+    &lt;dd&gt;return 1;&lt;/dd&gt;
+  &lt;dd&gt;}&lt;/dd&gt;
+  &lt;dd&gt;return num * factorialize(num -1);&lt;/dd&gt;
+&lt;dd&gt;}&lt;/dd&gt;
+&lt;dd&gt;factorialize(5);&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;What we did here is take the argument passed, let’s say 5, and used recursion (calling a function inside a function, or in this example, a function calling itself). So we’ll take 5 x (5-1) or,
+5 x (4) until we get to the number 1. (5 * (4 * (3 * (2 * (1)))).&lt;/p&gt;
+
+&lt;p&gt;Written in ES5 we have:
+&lt;dd&gt;function factorialize (num) {&lt;/dd&gt;
+  &lt;dd&gt;if (num &amp;lt;=0 ) {&lt;/dd&gt;
+    &lt;dd&gt;return 1;&lt;/dd&gt;
+  &lt;dd&gt;}&lt;/dd&gt;
+  &lt;dd&gt;return num * factorialize(num -1);&lt;/dd&gt;
+&lt;dd&gt;}&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd&gt;factorialize(5); // 120&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;These aren’t complex algorithms at all, but when you’re beginning to work with JavaScript, especially at the time when the FCC modules stop the handholding, these can seem very confusing so I wanted to add my solutions and explanation of each process and hope that I can help a few people out in the process. I’ll be posting solutions each week on my blog if you’d like to visit me at angelroddy.com. You can also view my portfolio at angelroddie.com. Thanks for checking out my post!&lt;/p&gt;
+
+&lt;p&gt;Read next: &lt;a href=&#34;http://example.org/my-journey/&#34;&gt;My Journey&lt;/a&gt;.&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>How I Got Into Programming</title>
+			<link>http://example.org/my-journey/</link>
+			<pubDate>Wed, 13 Jun 2018 00:00:00 UTC</pubDate>
+			<author>Angel Rodriguez</author>
+			<guid>http://example.org/my-journey/</guid>
+			<description>&lt;p&gt;Welcome to my first post. I&#39;m excited that I can share my story with you. In less than a month, I&#39;ll be diving headfirst into a intensive web development bootcamp and I plan on taking time out to chronicle my experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/angelrodriguez/image/upload/c_scale,w_463/v1528050361/photo-1505370632420-d1e987d5c75c.jpg&#34; alt=&#34;fear&#34; width=&#34;100%&#34; height=&#34;auto&#34;&gt;&lt;caption&gt;&lt;i&gt; Fear of the unknown - image courtesy of Unsplash&lt;/i&gt;&lt;/caption&gt;&lt;/p&gt;
+
+&lt;p&gt;I&#39;ve been dabbling with code for a little over a year and, yes, I do feel that I&#39;ve learned a lot so far, but there are also some things I feel I&#39;m lacking in, too. There are tons of great resources out there for new and senior developers alike to learn any programming language or sharpen their skills, but it takes a world of patience and discipline to get to the point where you feel adequate enough to work in the industry. I&#39;m trying hard not to speak for others, but to cover the rollercoaster of emotions I&#39;ve experienced while learning to code. A lot of what I know now I learned from sites like &lt;a href=&#34;https://www.codecademy.com/&#34;&gt;Codecademy&lt;/a&gt; and &lt;a href=&#34;https://www.freecodecamp.org/&#34;&gt;FreeCodeCamp&lt;/a&gt;. Both outlets helped me build a lot of confidence on my path to learning HTML, CSS and JavaScript. But when I hit FCC&#39;s algorithm challenges, I felt bewildered. At the time, I felt this was too intense for me and I wasn&#39;t prepared enough to tackle these problems. I didn&#39;t quite know how to think like a programmer just yet. Heck, I&#39;m still working on that.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1&gt;Going Back a Bit...&lt;/h1&gt;
+
+&lt;p&gt;My first exposure to code was over a decade ago. A site named &#34;Migente&#34;, a social network for Latinos, was modeled in the likes of Myspace and Facebook. This was a digital social hub where, mostly Latinos, from all over the world could share their lives with others. The site still exists, although it&#39;s nothing like it was when I once frequented it. Migente allowed users to style their pages with simple markup and some basic inline stying, similar to Myspace. I regret not having stuck with it and digging deeper into html at the time because it probably would have led me to Javascript sooner. But you can&#39;t change what happened in the past.&lt;/p&gt;
+
+&lt;p&gt;My background is mostly in food-service management. Having been exposed to the French kitchen brigade system and the legacy and teachings of French culinary titans like Antonin Careme and Georges Escoffier, I was classically trained as a chef. I have always had a passion for cooking and learning about the history of food and the impact it has made throughout time among many different civilizations. I decided to attend culinary school and further my passion for food, graduating with a BSc in Culinary Arts. While studying, I was lucky enough to take a few tours through Europe and experience a lot of the gritty and beautiful side of business and food preparation - literally from start to finish. In theory, and in the right environment, food can be fun and amazing; it&#39;s that way for me, at least. There&#39;s something about creating a great new recipe and adding that to a menu that can be exhilarating. One of my strengths and my favorite challenges while at culinary school was menu planning and recipe/menu construction. However, many years in food-service can also be harsh and merciless. Finding myself with very little time to enjoy life and utterly exhausted, I left my job as a food and beverage manager. I took a job outside of my profession with a significant pay cut to allow myself the time and energy to learn to code.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/angelrodriguez/image/upload/c_scale,w_700/v1529767933/lecture.jpg&#34; alt=&#34;lecture&#34; width=&#34;100%&#34; height=&#34;auto&#34;&gt;&lt;caption&gt;&lt;i&gt;Most don&#39;t know that culinary school is comprised of quite a bit of lecture time, too - image courtesy of Unsplash&lt;/i&gt;&lt;/caption&gt;&lt;/p&gt;
+
+&lt;h1&gt;A Dip in the Python Pool&lt;/h1&gt;
+
+&lt;p&gt;My brother-in-law is a CS grad (not a culinary school CS 😜) and currently works for a large world bank as a data-analyst. He&#39;s been working with Python for several years and I had multiple conversations with him about the language, but our discussions never piqued past surface scraping talk.&lt;/p&gt;
+
+&lt;p&gt;I came upon a book by Cory Althoff named &lt;a href=&#34;https://www.amazon.com/Self-Taught-Programmer-Definitive-Programming-Professionally-ebook/dp/B01M01YDQA&#34;&gt;The Self Taught Programmer&lt;/a&gt;. I read the entire book and was amazed at how a guy without a CS degree would dare to pursue a career in programming without the formal education I thought was a crucial requirement in the field. He did so nonetheless.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/angelrodriguez/image/upload/c_scale,w_250/v1528049468/41_2BAZ8DBxNL._SX403_BO1_204_203_200_.jpg&#34; alt=&#34;Cory Althoff&#34; width=&#34;50%&#34; height=&#34;auto&#34;&gt;&lt;i&gt; Python Learnin&#39;&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;While reading the book, I took to Codecademy and fiddled with the Python tutorials. It seemed like a nice language that was logical and readable, but I just didn&#39;t see how I could apply this to any web related work I wanted to do. I have since changed my mind about that. Python is an amazing and powerful programming language, from what I see and hear.&lt;/p&gt;
+
+&lt;p&gt;If I could take one critical piece from the conversations I had with my brother, it&#39;s something he asked me after I told him I was pursuing a career in programming. He asked me something along the lines of what kind of job I wanted in tech. What was the purpose of all of this? I carried that with me, even to this day. I also thought about that often while learning and that&#39;s what really drove me to set goals.&lt;/p&gt;
+
+&lt;h1&gt;Markup and Logic&lt;/h1&gt;
+
+&lt;p&gt;Having thought about this question more and more, I realized what I really wanted out of this was to ultimately become a web developer. Back to Codecademy, I took the html and css lessons along with the Javascript courses. I then found FreeCodeCamp which was a fantastic source for anyone looking to pursue a deeper knowledge of web development.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/angelrodriguez/image/upload/c_scale,w_350/v1528049572/41T53nRtyoL._SX435_BO1_204_203_200_.jpg&#34; alt=&#34;Duckett&#34; width=&#34;50%&#34; height=&#34;auto&#34;&gt;&lt;caption&gt;&lt;i&gt; Duckett! Just read it!&lt;/i&gt;&lt;/caption&gt;&lt;/p&gt;
+
+&lt;p&gt;I found another couple books covering html, css and Javascript, &lt;a href=&#34;https://www.amazon.com/Web-Design-HTML-JavaScript-jQuery/dp/1118907442?ref=ast_p_ep&#34;&gt;by Jon Duckett&lt;/a&gt;. These were great books that broke down large concepts and simplified them for those that were mildly knowledgeable of the material presented. I read what I felt where the most important parts and applied that to my learning.&lt;/p&gt;
+
+&lt;h1&gt;Let&#39;s Fast Forward a Bit&lt;/h1&gt;
+
+&lt;p&gt;During my FCC hiatus, I took a long ride on the tutorial train and took some Udemy courses along with other MOOCs. I felt more confident in my ability to apply html, css and Javascript to my work, but I realized that I didn&#39;t know as much as I thought I did when I tried to code on my own.&lt;/p&gt;
+
+&lt;p&gt;A Javascript conference in Philadelphia was being held in September of 2017 so I decided to go. Why not? I was about two months into learning Javascript at this point. It was very eye opening to meet so many people of different ages and from all walks of life. While speaking to quite a few programmers, some with CS degrees, some without, I noticed a redundancy in our conversations. I explained my frustrations and wondered how I could expand my knowledge of Javascript and many told me I should attend a bootcamp. I came up with every excuse as to why a bootcamp wasn&#39;t possible and left it at that.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/angelrodriguez/image/upload/c_scale,w_500/v1528050561/photo-1502951682449-e5b93545d46e.jpg&#34; width=&#34;100%&#34; height=&#34;auto&#34;&gt;&lt;caption&gt;&lt;i&gt; Eloquent programming - image courtesy of Unsplash&lt;/i&gt;&lt;/caption&gt;&lt;/p&gt;
+
+&lt;p&gt;Just recently, I broke down and told my wife that my target of being job ready by August just wasn&#39;t going to happen. She told me I should just go for it, leave my job and enroll in coding bootcamp. I can&#39;t remember exactly how I responded but what I do recall is that I felt this exhilaration and an urge to kick myself for not having done this sooner. I knew she was right. Now I know there are plenty of people that have cut their teeth in the programming realm without a formal education or even without a bootcamp, but that just wasn&#39;t me. I realized that I needed the experience of working in a cohort of like-minded people that would push and challenge me on a daily basis. That and the mentorship would be well worth the price of admission.&lt;/p&gt;
+
+&lt;h1&gt;Where Am I Now&lt;/h1&gt;
+
+&lt;p&gt;The path is now a lot clearer. I&#39;m excited to pursue this brief and agonizing path that&#39;s ahead and I pray to God that He blesses me with the strength, ferocity and fortitude to absorb as much knowledge as I can while I&#39;m there. I also hope that I can be an inspiration to others with my story. My portfolio and my work isn&#39;t nearly where I want it to be, but this is yet another reason why I made my decision. I&#39;m not saying a coding bootcamp will magically turn me into a programming wizard, but I feel this will accelerate my ability to find a job sooner than later.&lt;/p&gt; 
+
+&lt;p&gt;I have since completed the basic algorithm challenges at FCC and worked on some of the Javascript projects both at FCC and also my own personal projects. My hopes are that in a few months, I&#39;ll hit my goal and be job ready. Since my first real taste of code a little over a year ago, I&#39;ve worked with a considerable amount of tools, including: Atom, Sublime, VS Code (the best IMHO!), Netlify, Github, Git, Heroku, FCC, Codecademy, Treehouse, Hugo, Firebase (another favorite), Node.js, Cloud9, Bootstrap, MongoDB, NPM, Thimble, Howler.js, Semantic UI, JQuery, Clippy, APIs, dabbled with React and a few others.&lt;/p&gt;
+
+&lt;p&gt;Since you made it to the end of my very first post, I would like to thank you for reading my story. I would also love to hear from you and hope you check out both my websites. I would much appreciate any critique, suggestions or even compliments if you feel inclined to do just that. Some of what you see on both sites is conceptual material and some filler. No, I&#39;m not a &#34;Full-Stack Dev&#34; but I hope to be one soon. I&#39;m not trying to take anything away from those that kept their heads down for years and earned every stripe; I know it takes a lot to get there. In the future, I will try to jot my progress down more concisely and keep my entries shorter for easier reading. Much luck and God Bless!&lt;/p&gt;
+
+&lt;p&gt;Read next: &lt;a href=&#34;fcc-algorithms&#34;&gt;FCC Algorithms&lt;/a&gt;.&lt;/p&gt;
+</description>
+		</item>
+		
+	</channel>
+</rss>

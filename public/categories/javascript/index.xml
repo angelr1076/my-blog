@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Angel&#39;s Blog</title>
+    <link>http://example.org/categories/javascript/</link>
+    <description>Recent content in Javascript on Angel&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FreeCodeCamp Algorithm Challenges</title>
+      <link>http://example.org/fcc-algorithms/</link>
+      <pubDate>Mon, 24 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/fcc-algorithms/</guid>
+      <description>JavaScript Algorithms Today, we’re going to cover several of freeCodeCamp’s algorithm challenges from the Javascript Algorithms And Data Structures Certification. I’ll skip the first “Celsius to Fahrenheit” challenge. I just feel like there’s not much to explain there where you can find the conversion pretty much anywhere on the internet.
+Reverse a String Let’s start with the “Reverse the String” challenge. The first time I solved this challenge, I used a few JavaScript built-in functions and chained them together like so:</description>
+    </item>
+    
+    <item>
+      <title>How I Got Into Programming</title>
+      <link>http://example.org/my-journey/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/my-journey/</guid>
+      <description>Welcome to my first post. I&#39;m excited that I can share my story with you. In less than a month, I&#39;ll be diving headfirst into a intensive web development bootcamp and I plan on taking time out to chronicle my experience.
+ Fear of the unknown - image courtesy of Unsplash
+I&#39;ve been dabbling with code for a little over a year and, yes, I do feel that I&#39;ve learned a lot so far, but there are also some things I feel I&#39;m lacking in, too.</description>
+    </item>
+    
+  </channel>
+</rss>
