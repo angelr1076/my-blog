@@ -1,0 +1,44 @@
+# Site settings
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Angel's Blog"
+theme = "story"
+paginate = 5
+buildFuture = true
+
+[[menu.social]]
+  name = "GitHub"
+  title = "fab fa-github-square"
+  url = "https://github.com/angelr1076"
+
+  [[menu.social]]
+  name = "Linkedin"
+  title = "fab fa-linkedin-in"
+  url = "https://www.linkedin.com/in/angelrodriguezlead/"
+
+  [[menu.social]]
+  name = "Twitter"
+  title = "fab fa-twitter-square"
+  url = "https://twitter.com/AngelRoddy7"
+
+[[menu.main]]
+#   name = "Talks"
+#   title = "Talks"
+#   url = "/talks/"
+
+[[menu.main]]
+#   name = "Slides"
+#   title = "Slides"
+#   url = "/slides/"
+
+[params]
+  author = "Angel Rodriguez"
+  twitter = "https://twitter.com/AngelRoddy7"
+  classes = []
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
